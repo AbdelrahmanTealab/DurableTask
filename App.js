@@ -1,30 +1,12 @@
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  useColorScheme,
-} from 'react-native';
-
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
 import Home from './src/screens/Home';
+import React, { Component } from 'react'
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+export class App extends Component {
+  render() {
+    return (
       <Home />
-    </SafeAreaView>
-  );
-};
+    )
+  }
+}
 
-
-export default App;
+export default App

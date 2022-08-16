@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 export class HomeContent extends Component {
   render() {
     return (
-      <View>
+      <View style={this.props.style}>
         <Text>HomeContent</Text>
       </View>
     )
